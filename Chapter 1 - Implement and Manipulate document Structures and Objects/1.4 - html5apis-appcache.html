@@ -1,0 +1,21 @@
+<html lang="en" manifest="webApp.appcache">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>    
+        window.onload = function () {
+            var appCache = window.applicationCache;
+            appCache.oncached = function (e) {
+                alert("cache successfully downloaded.");
+            };
+            appCache.onupdateready = function (e) {
+                appCache.swapCache();
+            };
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

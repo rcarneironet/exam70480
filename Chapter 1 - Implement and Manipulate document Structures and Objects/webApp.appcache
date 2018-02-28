@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# My Web Application Cache Manifest
+# v.1.0.0.25
+#
+#Cache Section. All Cached items.
+
+CACHE MANIFEST
+html5apis.html
+
+#Required Network resources
+NETWORK:
+html5apis.html
+
+#Fallback items.
+FALLBACK:html5apis.html html5apis-appcache.html
