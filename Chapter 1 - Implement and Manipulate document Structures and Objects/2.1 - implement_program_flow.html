@@ -1,0 +1,208 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <div id="elemento1" style="background-color:red">
+        Div
+    </div>
+
+    <script>
+
+        //equalidade
+        /*
+        var n = 2000, s = '2000';
+        console.log(n == s);
+        console.log(n === s);
+        */
+
+        //condicional
+        /*
+        var userAge = 10, gender = 'M';
+        var minimumAge = 11;
+
+        if (userAge > minimumAge) {
+            if (gender == 'M') {
+                //do logic for above age male    
+            } else {
+                //do logic for above age female.    
+            }
+        } else if (gender == 'M') {
+            //do logic for underage male
+        } else {
+            //do logic for underage female.
+        }
+        */
+
+        //condicional com elementos
+        /*
+        var canvas = document.getElementById("elemento1");
+        if (canvas.style.backgroundColor == 'green' || canvas.style.backgroundColor == 'yellow') {
+            console.log('A cor da DIV é verde ou amarelo');
+        }
+        else if (canvas.style.backgroundColor == 'red') {
+            console.log('A cor da DIV é vermelha');
+        }
+        */
+
+        //array
+        /*
+        var anArray = new Array(5);
+        anArray[1] = 'soccer';
+        console.log(anArray[1]);
+        */
+
+        //array - se você inicialmente alocar apenas 5 mas depois procurar em outro index maior, a array é dinamicamente aumentada para acomodar
+        //var anArray = new Array(5);
+        //console.log(anArray.length);
+
+        //anArray[9] = "soccer";
+        //console.log(anArray.length);
+
+        //array concat
+        /*
+        var sports = new Array('football', 'cricket', 'rugby', 'tennis', 'badminton');
+        var moreSports = new Array('soccer', 'basketball', 'hockey');
+        var combinedSports = sports.concat(moreSports);
+        console.log(combinedSports);
+        */
+
+        //indexof
+        /*
+        var sports2 = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        var index = sports2.indexOf('football', 0);        
+        console.log("index: " + index);
+        */
+
+        //Join - O método join coloca todos os elementos em apenas uma string separada pelo separador especificado
+        /*
+        var sports3 = new Array('soccer', 'basketball', 'hockey');
+        var joined = sports3.join(',');
+        console.log(joined);
+        */
+
+        //Reserse - O método reverse pega todos os elementos e os colocam em ordem reversa
+        /*
+        var sports4 = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        sports4.reverse();
+        console.log(sports4);
+        */
+
+        //Sort - O método faz um 'sorteio' e embaralha as palavras da string
+        /*
+        var sports5 = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        console.log(sports5.indexOf('soccer'));        
+        sports.sort();
+        console.log(sports5.indexOf('soccer'));     
+        */
+
+        //slice - O método slice tira um ou mais valores da string e os coloca em outra array.
+        //O primeiro indice do método é onde deve começar e terminar
+        /*
+        var sports6 = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        var someSports = sports6.slice(1, 2);   
+        console.log('Slice: ' + someSports);      
+        */
+
+        //splice - método para trocar itens em uma array por novos items
+        /*
+        var sports7 = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+        var splicedItems = sports7.splice(1, 3, 'golf', 'curling', 'darts');
+        console.log(sports7);
+        console.log(splicedItems);
+        */
+
+        //Tipos especiais de Array: push, pop
+
+        //push: insere no final da lista
+        /*
+        var sports8 = new Array();
+        sports8.push('soccer', 'basketball', 'hockey');
+        sports8.push('football');
+        console.log(sports8);
+        */
+
+        //pop: remove todos os itens e pega o ultimo da lista
+        /*
+        var nextSport = sports8.pop();
+        console.log(nextSport);
+        */
+
+        //shift & unshift : shift remove e retorna a primeira evidencia uma array. O unshift insere um elemento no inicio da array
+        /*
+        var sports9 = new Array();
+        sports9.unshift('soccer', 'basketball', 'hockey');
+        sports9.unshift('football');
+        console.log(sports9);
+        var nextSport = sports9.shift();
+        console.log(nextSport);
+        */
+
+        //every : Possibilita processar lógica em cada elemento do array através de callbacks de funcoes/metodos
+        /*
+        var evenNumbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+        var allEven = evenNumbers.every(evenNumberCheck, this);
+        if (allEven) {
+            console.log("A sequencia é formada apenas por numeros pares");
+        } else {
+            console.log("A sequencia não é formada apenas por numeros pares");
+        }
+
+        function evenNumberCheck(value, index, array) {
+            return (value % 2) == 0;
+        }*/
+
+        //some: igual ao every, possibilita processar logica em cada elemento da array mas só chama o callback se for VERDADEIRO
+
+        //foreach: processa lógica em cada elemento da array/coleção
+        /*
+        var sportsArray = ['soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby'];
+        sportsArray.forEach(offerSport);
+        function offerSport(value, index, array) {
+            var sportsList = document.getElementById("sportsList");
+            var bullet = document.createElement("li");
+            bullet.innerText = value;
+            sportsList.appendChild(bullet);
+        }
+        */
+
+        //filter: método que remove itens de uma array se o retorno do callback for VERDADEIRO e cria um novo array com o resultado
+        /*
+        var evenNumbers = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+        var allEven = evenNumbers.filter(evenNumberCheck, evenNumbers);
+        //work with the even numbers....
+        function evenNumberCheck(value, index, array) {
+            return (value % 2) == 0;
+        }
+        */
+
+        //map: método que possibilita alterar valores na array. Cada elemento é passado pro método callback. 
+        //O valor retornado do callback irá substituir o elemento da array
+        /*
+        var money = [12.8, 15.9, 21.7, 35.2];
+        var roundedMoney = money.map(roundOff, money);
+        function roundOff(value, position, array) {
+            return Math.round(value);
+        }
+        */
+
+        //Reduce e ReduceRight: Métodos recursivos. O valor resultante do callback é passado de volta pro método que o chamou com o valor novo e antigo
+        /*
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var factorials = numbers.reduce(factorial);
+
+        function factorial(previous, current) {
+            return previous * current;
+        }
+        */
+
+
+    </script>
+
+</body>
+
+</html>

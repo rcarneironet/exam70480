@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        //Objetos nativos do JS. Ex: Math, é estático
+        var squareValue = Math.sqrt(144);
+        console.log("Raiz quadrada de 144 é: " + squareValue);
+
+        //Array, necessita instanciar.
+        var listofPrimeNumbers = new Array(1, 2, 3, 5, 7, 11, 13, 17, 19, 23);
+        console.log(listofPrimeNumbers);
+
+        //Objetos tipos nativos/primitivos
+        var txt = "my long string"; //string
+        var num = 5 //int
+
+        //criando objetos customizados
+        var book = {
+            ISBN: "55555555",
+            Length: 560,
+            genre: "programming",
+            covering: "soft",
+            author: "John Doe",
+            currentPage: 5,
+            title: "My Big Book of Wonderful Things",
+            flipTo: function flipToAPage(pNum) {
+                this.currentPage = pNum;
+            },
+            turnPageForward: function turnForward() {
+                this.flipTo(this.currentPage++);
+                console.log("Chamei o metodo, fui pra pagina: " + this.currentPage);
+            },
+            turnPageBackward: function turnBackward() {
+                this.flipTo(this.currentPage--);
+                console.log("Chamei o metodo, fui pra pagina: " + this.currentPage);
+            }
+        }        
+        console.log(book);
+        book.turnPageForward(15);
+
+    </script>
+
+</body>
+
+</html>
