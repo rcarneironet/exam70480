@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <script>   
+/*
+        function onloadHandler() {
+            console.log("olá enviado pelo evento associado a propriedade do elemento html.");
+        }
+*/
+        //chamando função direto por Javascript, sem associar ao atributo do elemento
+/*
+        window.onload = onloadHandler();
+        function onloadHandler() {
+            console.log("Olá enviado de evento associado com javascript.");
+        }
+        
+        window.onload = function () {
+            console.log("Olá enviado de evento associado com javascript e funcao anonima.");
+        }
+*/
+        //chamando funcoes com addEventListener e removeEventListener
+        /*
+        window.addEventListener("load", onloadHandlerListener, false);
+        window.addEventListener("load", onloadHandlerListener2, false);
+
+        function onloadHandlerListener() {
+            alert("hello event 1.");
+        }
+
+        function onloadHandlerListener2() {
+            alert("hello event 2.");
+        }
+
+        window.removeEventListener("load", onloadHandlerListener2, false);
+        */
+
+        //eventos customizados
+        /*
+        myEvent = new CustomEvent("anAction",
+            {
+                detail: {
+                    description: "Descricao do evento customizado",
+                    timeofevent: new Date(),
+                    eventcode: 2
+                },
+                bubbles: true,
+                cancelable: true
+            }
+        );
+
+        document.addEventListener("anAction", customEventHandler);
+        document.dispatchEvent(myEvent);
+        function customEventHandler() {
+            alert(window.event.detail.timeofevent);
+        }
+        */
+    </script>
+</head>
+<!-- Método associado ao atributo onload do elemento body -->
+
+<body>
+</body>
+
+</html>
