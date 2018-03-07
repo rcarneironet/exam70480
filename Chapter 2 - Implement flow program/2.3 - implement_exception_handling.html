@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script>   
+       /*
+        try {
+            window.dosomeunsupportedmethod();
+        }
+        catch (e) {
+            alert("O browser não suporta essa funcionalidade.");
+        }
+        */
+
+        try {
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            context.fillStyle = "blue";
+            context.arc(50, 50, 25, 0, 360);
+            context.fill();
+            context.strokeStyle = "red";
+            context.stroke();
+        }
+        catch (e) {
+            console.log(e.message);
+        }
+        finally {
+            //faz alguma logica antes de sair do método
+            console.log('finally rodou');
+        }
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
