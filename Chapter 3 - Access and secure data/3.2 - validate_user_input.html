@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <script type="text/javascript">    
+        function CheckString() {
+            try {
+                var s = $('#regExString').val();
+                var regExpression = /^[A-Z,a-z]\d[A-Z,a-z][\s{1}]?\d[A-Z,a-z]\d/;
+
+                if (regExpression.test(s))
+                    alert("Valid postal code.");
+                else alert("Invalid postal code.");
+            } catch (e) {
+                alert(e.message);
+            }
+        }
+
+        //eval
+
+        function myFunction() {
+            var x = 10;
+            var y = 20;
+            var a = eval("x * y");
+            var b = eval("2 + 2");
+            var c = eval("x + 17");
+            alert(a)
+        }
+
+    </script>
+    <button onclick="myFunction()">Eval</button>
+
+    <form>
+        <input type="text" id="regExString" />
+        <button onclick="CheckString();">Evaluate</button>
+    </form>
+
+</html>
